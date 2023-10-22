@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #223f5e; /* Установите темно-синий цвет фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.search-container {
+    position: relative;
+    transition: transform 0.3s ease;
+    background-color: #223f5e;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    border: 2px solid #ffc107; /* Выделите поисковую строку золотым цветом */
+}
+
+.search-label {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background-color: #223f5e;
+    padding: 0 5px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    color: #fff;
+    outline: none; /* Уберите контур фокуса */
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+}
+
+.suggestions li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.suggestions li:last-child {
+    border-bottom: none;
+}
+.search-container {
+    position: relative;
+    transition: transform 0.3s ease; /* Добавьте анимацию при изменении transform */
+}
+
+/* Добавьте новый стиль для анимации поднятия */
+.search-container:hover {
+    transform: translateY(-40px); /* Поднимет строку на 10px при наведении */
+}
+.search-container:hover .search-label {
+    top: -35px; /* Поднимет label выше */
+    font-size: 12px; /* Уменьшит размер шрифта label */
+    background-color: transparent; /* Уберет фон для label */
+}
